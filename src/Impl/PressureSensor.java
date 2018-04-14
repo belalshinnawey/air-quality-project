@@ -14,6 +14,10 @@ public class PressureSensor extends Sensor{
         super(value); 
         setUnit(unit);
     }
+    
+    public PressureSensor(double value) {
+        this(value,"mb");
+    }
 
    
 

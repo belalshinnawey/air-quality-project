@@ -29,6 +29,8 @@ public class CityFactory implements ICityFactory{
             return new City("Jeddah", new GPS(21.2854,39.2376));
         }else if (cityName.equalsIgnoreCase("madinah")){
             return new City("Madinah", new GPS(24.5247,39.5692));
+        }else if(cityName.equalsIgnoreCase("Abha")){
+           return new City("Abha", new GPS(18.2465,42.5117)); 
         }
         return null;
     }

@@ -15,6 +15,9 @@ public class HumiditySensor extends Sensor {
         super(value); 
         setUnit(unit);
     }
+     public HumiditySensor(double value) {
+        this(value,"p");
+    }
 
    
 

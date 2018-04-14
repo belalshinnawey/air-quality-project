@@ -26,8 +26,18 @@ public class Measurement extends MeasurementComparator implements IMeasurement {
     private ArrayList<String> sensorTypes = new ArrayList<>();
 
     public Measurement(Date date, City city) {
-        this.date = date;
-        this.city = city;
+        setDate(date);
+        setCity(city);
+        sensors = new HashMap<>();
+        sensorTypes.add("DistanceSensor");
+        sensorTypes.add("HumiditySensor");
+        sensorTypes.add("PressureSensor");
+        sensorTypes.add("TemperatureSensor");
+
+    }
+
+    public Measurement(City city) {
+        setCity(city);
         sensors = new HashMap<>();
         sensorTypes.add("DistanceSensor");
         sensorTypes.add("HumiditySensor");
